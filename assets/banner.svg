@@ -1,0 +1,208 @@
+<svg fill="none" viewBox="0 0 1000 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="primaryTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="pulseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- CSS Animations -->
+    <style>
+      .node-pulse {
+        animation: pulse 3s ease-in-out infinite alternate;
+      }
+      .link-flow {
+        stroke-dasharray: 8 6;
+        animation: flow 20s linear infinite;
+      }
+      .link-flow-reverse {
+        stroke-dasharray: 8 6;
+        animation: flowReverse 25s linear infinite;
+      }
+      .orb-float-1 {
+        animation: floatOrb1 8s ease-in-out infinite alternate;
+      }
+      .orb-float-2 {
+        animation: floatOrb2 10s ease-in-out infinite alternate;
+      }
+      .pill-float {
+        animation: pillHover 4s ease-in-out infinite alternate;
+      }
+      @keyframes flow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes flowReverse {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 200; }
+      }
+      @keyframes floatOrb1 {
+        0% { transform: translate(0px, 0px) scale(1); opacity: 0.35; }
+        100% { transform: translate(30px, -20px) scale(1.15); opacity: 0.6; }
+      }
+      @keyframes floatOrb2 {
+        0% { transform: translate(0px, 0px) scale(1); opacity: 0.25; }
+        100% { transform: translate(-25px, 25px) scale(1.2); opacity: 0.55; }
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        100% { transform: scale(1.03); opacity: 1; }
+      }
+      @keyframes pillHover {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-4px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1000" height="320" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Background Dynamic Ambient Orbs -->
+  <g>
+    <circle class="orb-float-1" cx="200" cy="80" r="120" fill="#38bdf8" filter="url(#glow)" opacity="0.35" />
+    <circle class="orb-float-2" cx="820" cy="240" r="140" fill="#818cf8" filter="url(#glow)" opacity="0.3" />
+    <circle class="orb-float-1" cx="500" cy="290" r="90" fill="#c084fc" filter="url(#glow)" opacity="0.2" />
+  </g>
+
+  <!-- Decorative Relational Schema Schema Nodes in Background -->
+  <g opacity="0.45">
+    <!-- Relational Flow Paths -->
+    <path class="link-flow" d="M 120 70 C 260 40, 340 100, 480 80" stroke="url(#lineGrad)" stroke-width="2" fill="none" />
+    <path class="link-flow-reverse" d="M 520 80 C 660 60, 750 120, 880 75" stroke="url(#lineGrad)" stroke-width="2" fill="none" />
+    <path class="link-flow" d="M 150 240 C 280 270, 390 220, 500 250" stroke="url(#lineGrad)" stroke-width="2" fill="none" />
+    <path class="link-flow-reverse" d="M 520 250 C 650 280, 780 230, 890 245" stroke="url(#lineGrad)" stroke-width="2" fill="none" />
+    <path class="link-flow" d="M 120 70 C 130 160, 140 180, 150 240" stroke="url(#lineGrad)" stroke-width="1.5" fill="none" />
+    <path class="link-flow-reverse" d="M 880 75 C 890 150, 885 180, 890 245" stroke="url(#lineGrad)" stroke-width="1.5" fill="none" />
+
+    <!-- Left Schema Mini-Table Card -->
+    <g transform="translate(60, 40)">
+      <rect width="110" height="70" rx="8" fill="url(#cardGrad1)" stroke="#38bdf8" stroke-width="1" />
+      <rect width="110" height="20" rx="8" fill="#1e293b" />
+      <text x="10" y="14" fill="#38bdf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="bold">USERS [PK]</text>
+      <circle cx="95" cy="10" r="3" fill="#22c55e" />
+      <text x="10" y="34" fill="#94a3b8" font-family="monospace" font-size="8">id: uuid [PK]</text>
+      <text x="10" y="48" fill="#94a3b8" font-family="monospace" font-size="8">org_id: fk</text>
+      <text x="10" y="62" fill="#94a3b8" font-family="monospace" font-size="8">email: text</text>
+    </g>
+
+    <!-- Bottom Left Schema Mini-Table Card -->
+    <g transform="translate(90, 210)">
+      <rect width="110" height="65" rx="8" fill="url(#cardGrad1)" stroke="#818cf8" stroke-width="1" />
+      <rect width="110" height="20" rx="8" fill="#1e293b" />
+      <text x="10" y="14" fill="#818cf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="bold">ORGANIZATIONS</text>
+      <text x="10" y="34" fill="#94a3b8" font-family="monospace" font-size="8">id: uuid [PK]</text>
+      <text x="10" y="48" fill="#94a3b8" font-family="monospace" font-size="8">tier: varchar</text>
+    </g>
+
+    <!-- Right Schema Mini-Table Card -->
+    <g transform="translate(830, 45)">
+      <rect width="110" height="70" rx="8" fill="url(#cardGrad1)" stroke="#c084fc" stroke-width="1" />
+      <rect width="110" height="20" rx="8" fill="#1e293b" />
+      <text x="10" y="14" fill="#c084fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="bold">CUSTOM_OBJECT</text>
+      <circle cx="95" cy="10" r="3" fill="#38bdf8" />
+      <text x="10" y="34" fill="#94a3b8" font-family="monospace" font-size="8">record_id: pk</text>
+      <text x="10" y="48" fill="#94a3b8" font-family="monospace" font-size="8">link_id: rel_fk</text>
+      <text x="10" y="62" fill="#94a3b8" font-family="monospace" font-size="8">schema: jsonb</text>
+    </g>
+
+    <!-- Bottom Right Schema Mini-Table Card -->
+    <g transform="translate(835, 215)">
+      <rect width="110" height="65" rx="8" fill="url(#cardGrad1)" stroke="#38bdf8" stroke-width="1" />
+      <rect width="110" height="20" rx="8" fill="#1e293b" />
+      <text x="10" y="14" fill="#38bdf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="bold">LINKED_RECORDS</text>
+      <text x="10" y="34" fill="#94a3b8" font-family="monospace" font-size="8">source_id: fk</text>
+      <text x="10" y="48" fill="#94a3b8" font-family="monospace" font-size="8">target_id: fk</text>
+    </g>
+
+    <!-- Center Top Node Indicator -->
+    <g transform="translate(450, 65)">
+      <rect width="100" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <text x="50" y="17" fill="#38bdf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="9" font-weight="bold" text-anchor="middle">1 : N RELATION</text>
+    </g>
+
+    <!-- Center Bottom Node Indicator -->
+    <g transform="translate(450, 235)">
+      <rect width="100" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+      <text x="50" y="17" fill="#c084fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="9" font-weight="bold" text-anchor="middle">M : N JUNCTION</text>
+    </g>
+  </g>
+
+  <!-- Foreground Main Title & Content (Crisp, High Contrast, Centered, Never Obscured) -->
+  <g transform="translate(500, 120)">
+    <!-- Badge Pill -->
+    <g class="pill-float" transform="translate(0, -25)">
+      <rect x="-170" y="-12" width="340" height="26" rx="13" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+      <text x="0" y="5" fill="#60a5fa" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">
+        ⚡ CURATED RELATIONAL &amp; SCHEMA ECOSYSTEM
+      </text>
+    </g>
+
+    <!-- Primary Title -->
+    <text x="0" y="35" fill="url(#primaryTextGrad)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="800" text-anchor="middle" letter-spacing="-0.5">
+      Awesome Relational Data Modeling
+    </text>
+    <text x="0" y="68" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      &amp; Custom Schema Platforms
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="98" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="400" text-anchor="middle">
+      Enterprise SaaS • No-Code Databases • Linked Records • Self-Hosted Open-Source Engines
+    </text>
+
+    <!-- Feature Tags Row -->
+    <g transform="translate(0, 126)">
+      <g transform="translate(-190, 0)">
+        <rect x="-45" y="-10" width="90" height="20" rx="10" fill="#0f172a" stroke="#334155" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="sans-serif" font-size="9" text-anchor="middle">No-Code DB</text>
+      </g>
+      <g transform="translate(-65, 0)">
+        <rect x="-50" y="-10" width="100" height="20" rx="10" fill="#0f172a" stroke="#334155" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="sans-serif" font-size="9" text-anchor="middle">PostgreSQL / MySQL</text>
+      </g>
+      <g transform="translate(65, 0)">
+        <rect x="-48" y="-10" width="96" height="20" rx="10" fill="#0f172a" stroke="#334155" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="sans-serif" font-size="9" text-anchor="middle">Linked Records</text>
+      </g>
+      <g transform="translate(190, 0)">
+        <rect x="-48" y="-10" width="96" height="20" rx="10" fill="#0f172a" stroke="#334155" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="sans-serif" font-size="9" text-anchor="middle">REST / GraphQL</text>
+      </g>
+    </g>
+  </g>
+</svg>
