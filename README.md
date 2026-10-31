@@ -2,178 +2,148 @@
 
 ## Top Relational Data Modeling & Custom Schema Ecosystem
 
-
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Tracked Category](https://img.shields.io/badge/Category-Data%20Modeling%20%26%20No--Code%20Database-blue.svg)](https://github.com/ishandutta2007/Awesome-Relational-Data-Modeling-Custom-Schema)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Relational-Data-Modeling-Custom-Schema)
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on No-Code Databases, Linked Records & Self-Hosted Relational Platforms*  
-
+*Focused on No-Code Databases, Custom Schema Design, Linked Records & Self-Hosted Relational Platforms*  
 **Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Relational Data Modeling & Custom Schema**. These tools enable teams to build custom databases with linked tables, defined field types, and relational integrity—without writing SQL or managing database infrastructure.
-
-
-
-**Examples** include HubSpot Custom Objects, Airtable, Salesforce Data Cloud, Quickbase, Zoho Creator, Caspio, Knack, Baserow, SmartSuite, and Coda (the category leaders).
-
-
-
-**Open-source emphasis**: Relational Data Modeling is a domain where open-source tooling is **genuinely mature and production-proven**, with clear leaders for different needs. **NocoDB** is the standout—a self-hosted Airtable alternative with 63k+ GitHub stars, active development, and support for linking external databases (Postgres, MySQL) while providing a spreadsheet-like UI, REST/GraphQL APIs, and low-code app building . **Baserow** offers a privacy-first, open-source no-code database with 25+ field types, linked records, multiple views, built-in automations, and a self-hosting path via Railway or Docker . The critical caveat: **commercial platforms differentiate on ecosystem integration**—HubSpot Custom Objects tie directly to CRM contacts and deals , and Airtable's Interface Designer turns data into shareable dashboards . Open-source tools provide the relational core but require you to build or integrate the surrounding application layer.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[HubSpot Custom Objects](https://knowledge.hubspot.com/object-settings/create-custom-objects)**  
-
-  Build custom objects with primary display properties, secondary properties, and associations to contacts, companies, and deals . **Best for HubSpot users** wanting to model domain-specific entities (Pets, Cars) within their CRM—but custom objects should not replicate existing CRM objects or replace activities like notes .
-
-
-
-- **[Airtable](https://www.airtable.com/)**  
-
-  The benchmark for relational no-code databases; bases contain multiple linked tables with 20+ field types (text, date, linked records, formulas, rollups), and multiple views (Grid, Kanban, Calendar, Gantt, Gallery, Form) . Supports many-to-many relationships via linked record fields, self-linking tables for hierarchical data (manager-subordinate), and junction tables for complex relationships . **Best for teams wanting the most mature relational no-code platform**—but per-seat pricing scales quickly with large teams.
-
-
-
-- **[Salesforce Data Cloud](https://developer.salesforce.com/docs/data/data-cloud-dmo-mapping/guide/c360dm-model-data.htm)**  
-
-  Standard and custom Data Model Objects (DMOs) built on the Customer 360 Data Model; DMOs are physical and virtual views of Data Lake Objects (DLOs), with starter data bundles that auto-map source objects to DMOs . **Best for Salesforce-centric organizations** wanting a unified customer data model—but requires Salesforce ecosystem investment.
-
-
-
-- **[Quickbase](https://help.quickbase.com/docs/creating-table-to-table-relationships)**  
-
-  Table-to-table relationships with parent-child hierarchy; Visual Builder shows data model lines between tables; supports cross-app relationships (child-to-parent only) with role-based security . **Best for organizations wanting structured, governed relational apps**—but cross-app relationships are not available on the Essential plan .
-
-
-
-- **[Zoho Creator](https://www.zoho.com/creator/)**  
-
-  Relational data modeling with Lookup fields (1:N between entities) and Subforms (1:N within a record); best practices emphasize modeling entities rather than forms, separating master data from transactional data, and using structured fields over generic "Notes" fields . **Best for Zoho ecosystem users** wanting custom applications with relational data—but requires Deluge scripting for advanced logic.
-
-
-
-- **[Caspio](https://www.caspio.com/)**  
-
-  Relational database model with no-code app building; users report ease of setting up complex database structures and embedding datapages into webpages . **Best for teams wanting a hosted relational database with app-building capabilities**—but lacks documentation for custom code beyond the no-code boundary .
-
-
-
-- **[Knack](https://www.knack.com/)**  
-
-  Tables represent one type of information each; connections between tables create one-to-many relationships without managing primary/foreign keys—Knack handles keys automatically . **Best for no-code app builders** wanting relational structure with automatic key management—but the connection model is simpler than Airtable's many-to-many support.
-
-
-
-- **[Baserow](https://baserow.io/)**  
-
-  Open-core database with 25+ field types, table linking, formulas, and multiple views . **The open-source core is also available for self-hosting** (see Open-Source section).
-
-
-
-- **[SmartSuite](https://www.smartsuite.com/features/tables)**  
-
-  Solutions contain up to 25 tables with 44 field types; Linked Record fields connect tables into a relational work graph; record capacity scales by plan (5k/100k/400k per Solution on Team/Professional/Enterprise) . **Best for GRC, IT, and operations teams** wanting governed relational structures—but the 25-table limit per Solution is a platform-wide constraint .
-
-
-
-- **[Coda](https://coda.io/)**  
-
-  Relation columns pull data from other tables; **linked relations** create two-way connections with editable values from either side, automatically generated as filter formulas . **Best for teams wanting document-database hybrid** with bidirectional relational editing—but formula-based relations require understanding Coda's model.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Full Relational No-Code Platforms
-
-
-
-- **[NocoDB](https://github.com/nocodb/nocodb)**  
-
-  The **leading open-source Airtable alternative** (63k+ GitHub stars, active development) . Connects to existing SQL databases (Postgres, MySQL) or creates new ones; provides spreadsheet-like UI with Grid, Kanban, Gallery, Form, and Calendar views; **REST/GraphQL APIs and SDKs/CLI** for every table; role-based access control; Docker/Kubernetes deployment . **Best for teams wanting a self-hosted relational database UI** over existing data—but it is a database frontend rather than a full application platform, and license/security posture should be reviewed before production .
-
-
-
-- **[Baserow](https://github.com/baserow/baserow)**  
-
-  Open-source **no-code database platform** with 25+ field types, **linked records with foreign-key lookups and rollups**, multiple views (Grid, Kanban, Gallery, Calendar, Form, Survey), built-in automations (triggers on row create/update/delete), application builder for custom interfaces, real-time collaboration, and **full CRUD REST API** for every table . **Self-hosting**: all-in-one Docker image with PostgreSQL and Redis, or one-click Railway template . **GDPR, HIPAA, SOC 2 compliant** when self-hosted . **Best for teams wanting a privacy-first, self-hosted Airtable alternative** with a clear upgrade path—but the application builder is less mature than Airtable's Interface Designer.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Teable** — Open-source Airtable alternative built on PostgreSQL; provides a spreadsheet-database hybrid with views, formulas, and collaboration. **Best for teams wanting Postgres-native relational modeling** with a no-code UI.
-
-- **APITable** — Open-source API-oriented low-code platform for building collaborative databases and apps; positioned as an Airtable alternative with API-first architecture. **Best for developer-led database applications**—heavier setup than NocoDB or Baserow.
-
-
-
-**Frameworks for building custom systems**: For a **self-hosted Airtable alternative over existing SQL databases**, NocoDB is the most mature open-source option with the largest community . For a **privacy-first, fully self-hosted no-code database with automations and app builder**, Baserow provides the most complete open-source experience . For **teams wanting a hosted relational platform with deep ecosystem integration**, HubSpot Custom Objects or Airtable remain the leaders .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Relational data platforms handling business data must comply with applicable privacy regulations (GDPR, CCPA) and data security policies; **self-hosted solutions place full responsibility for backups, access controls, and uptime on the operator**.
-
-- **Open-source relational data modeling is mature**—NocoDB provides a self-hosted Airtable alternative over existing databases , and Baserow provides a complete no-code database with automations and compliance certifications when self-hosted . However, **commercial platforms differentiate on ecosystem integration** (HubSpot's CRM associations , Airtable's Interface Designer , SmartSuite's governed GRC structures )—choose based on whether you need the relational core (open-source) or the surrounding application layer (commercial).
-
-- Verify license terms for commercial use; NocoDB is open-source (check repository), and Baserow's open-source core is available alongside a managed offering .
-
-
 
 ---
 
+### Overview & SEO Keywords
+This repository is an authoritative directory and comparative guide for **Relational Data Modeling**, **Custom Schema Design**, **No-Code Databases**, and **Self-Hosted SQL & Airtable Alternatives**. Whether you are architecting multi-table entity-relationship workflows in an enterprise CRM, spinning up rapid citizen-developer prototypes, or deploying self-hosted relational backends with automated REST/GraphQL APIs, this list provides comprehensive technical and pricing benchmarks.
 
+**Primary Keywords:** Relational Data Modeling, Custom Schema, No-Code Database, Low-Code Database, Linked Records, Foreign Key Management, Entity-Relationship Modeling, Airtable Alternative, Self-Hosted Relational DB, Postgres No-Code Admin.
 
-**Made for operations teams, no-code builders, and organizations choosing their relational data platform.**  
+---
 
-Let's make relational data modeling more open, but with clear eyes about the ecosystem integration that commercial platforms still hold.
+## Sector Overview & Market Dynamics
+
+The global market for **No-Code Databases & Low-Code Application Platforms (LCAP)** is estimated at **$30–$50 billion** (projected to exceed $100 billion by 2030 at a 25–30% CAGR), operating alongside the mature **Relational Database Management System (RDBMS) & Data Modeling Tools** market valued at **$60–$70 billion**.
+
+The sector exhibits **moderate-to-high fragmentation**: while enterprise CRM and data giants (Salesforce, HubSpot, Zoho) dominate ecosystem-tied customer master data, the independent relational no-code and visual database tier remains highly competitive and fragmented across venture-backed SaaS innovators (Airtable, Coda, SmartSuite, Quickbase) and a rapidly surging ecosystem of production-grade open-source self-hosted alternatives (NocoDB, Directus, Teable, Baserow).
+
+---
+
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## SaaS/Hosted Platforms
+
+The following SaaS platforms enable teams to build custom schemas, linked records, and relational databases. Sorted by **Company Size / Revenue / Valuation (Descending)**:
+
+| Platform | Company Size (Revenue / Valuation) | Starting Tier Pricing | Free Tier / Trial Limits | Description & Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Salesforce Data Cloud](https://developer.salesforce.com/docs/data/data-cloud-dmo-mapping/guide/c360dm-model-data.htm)** | ~$35B+ Annual Revenue / ~$300B+ Market Cap | $60,000 to $108,000/year (Consumption-based Data Cloud Starter bundle) | **Included $0 Provisioning Tier** (for Enterprise/Unlimited edition customers) with 250,000 Data Services credits, 1 TB data storage, 1 Data Cloud admin, and 1,000 Permission Set Licenses; 30-day trial for new evaluations. | Standard & custom Data Model Objects (DMOs) built on Customer 360 data model; physical and virtual views of Data Lake Objects with automated starter data bundle mappings. |
+| **[HubSpot Custom Objects](https://knowledge.hubspot.com/object-settings/create-custom-objects)** | ~$2.5B+ Annual Revenue / ~$30B+ Market Cap | $150/seat/month (Sales/Service Hub Enterprise) or $4,300/month (Customer Platform Enterprise) | **No free tier** for custom objects (strictly gated to Enterprise tiers); 14-day free trial on request. Limits: max 10 custom objects per portal, up to 500 properties per object. | Model domain-specific business entities (e.g., assets, subscriptions, real estate) directly related to native CRM contacts, companies, and deals with relational integrity. |
+| **[Airtable](https://www.airtable.com/)** | ~$11B Valuation / ~$300M+ ARR | $20/seat/month (Team plan, billed annually) | **Free Forever Plan**: 1,000 records per base, 1 GB attachment storage per base, up to 5 editors, unlimited bases, and 100 automation runs per month. | Benchmark relational spreadsheet-database hybrid with 20+ field types, many-to-many linked records, rollups, lookups, and Interface Designer for custom internal apps. |
+| **[Zoho Creator](https://www.zoho.com/creator/)** | ~$1.4B+ Annual Revenue (Zoho Corp) | $8/user/month (Standard plan, billed annually) | **Free Forever Plan**: 1 active application, 1 user, 5,000 total records across account, and 250 MB file/attachment storage. 15-day free trial for paid tiers. | Low-code relational application builder with Lookup fields (1:N), subforms, master-transactional architecture, and Deluge scripting for custom business logic. |
+| **[Quickbase](https://help.quickbase.com/docs/creating-table-to-table-relationships)** | ~$200M+ ARR / $1B+ PE Valuation (Vista Equity) | $35/user/month (Team plan, billed annually, 20-user minimum requirement) | **30-Day Free Trial** with full access to Business tier features; no permanent free plan. | Visual table-to-table relationships, parent-child hierarchies, cross-app relationships, and enterprise role-based governance for operations and workflow tracking. |
+| **[Coda](https://coda.io/)** | ~$1.4B Valuation | $10/Doc Maker/month (Pro plan, billed annually; Editors/Viewers are free) | **Free Forever Plan**: Unlimited doc makers and editors, un-nested/nested docs up to 50 objects per doc, 1,000 rows per table, and 35 automation runs per month. | Document-database hybrid with bidirectional linked relations, cross-doc synchronization, formula-driven schemas, and native interactive canvas interfaces. |
+| **[Caspio](https://www.caspio.com/)** | ~$50M–$100M Estimated Revenue | $300/month (Team plan, includes unlimited app users) | **14-Day Free Trial** with full visual app builder and database feature access (no credit card required); no permanent free plan. | Relational database engine supporting complex schema design, visual datapages, unlimited end-users, and embeddable database apps with strict data compliance. |
+| **[SmartSuite](https://www.smartsuite.com/features/tables)** | ~$50M–$100M Estimated Valuation | $15/user/month (Team plan, billed annually, 3-user minimum requirement) | **14-Day Free Trial** of the Professional Plan (no credit card required, unmetered access); no permanent free plan. Starting plan capped at 5,000 records per solution. | Work management and relational database suite with 44+ field types, relational linked record graphs, automated rollups, and up to 25 linked tables per Solution. |
+| **[Knack](https://www.knack.com/)** | ~$20M–$40M Estimated Revenue | $59/month ($49/month billed annually for Starter plan, unlimited users) | **14-Day Free Trial** capped at 10,000 records, 250 MB file storage, and 2,500 daily API requests; no permanent free plan. | Managed relational database builder with automated foreign key resolution, connected tables, user role hierarchies, and frontend portal generation without SQL. |
+| **[Baserow](https://baserow.io/)** | ~$10M–$20M Estimated Valuation | $12/user/month (Premium Cloud, billed annually) | **Free Forever Cloud Plan**: Unlimited bases, unlimited databases, up to 3,000 rows per workspace, and 2 GB total file storage. | Managed cloud offering of the open-core Baserow database, delivering modular table linking, foreign-key rollups, webhooks, and visual interface construction. |
+
+---
+
+## Open-Source GitHub Projects
+
+Open-source relational database platforms provide self-hosted control, zero vendor lock-in, customizable schemas, and REST/GraphQL API generation directly over PostgreSQL or MySQL engines.
+
+Sorted by **GitHub Star Count (Descending)**:
+
+### 1. [NocoDB](https://github.com/nocodb/nocodb)
+[![GitHub stars](https://img.shields.io/github/stars/nocodb/nocodb?style=social&color=white)](https://github.com/nocodb/nocodb/stargazers)
+- **Repository**: [nocodb/nocodb](https://github.com/nocodb/nocodb)
+- **Tech Stack**: TypeScript, Node.js, Vue.js (Connects to PostgreSQL, MySQL, SQL Server, SQLite)
+- **Overview**: The leading open-source Airtable alternative. Transforms any existing relational SQL database into a smart spreadsheet UI.
+- **Key Capabilities**: Grid, Kanban, Gallery, and Form views; relational links, lookups, and rollups; auto-generated REST and GraphQL APIs; role-based access control (RBAC); Docker & Kubernetes deployment.
+
+### 2. [Directus](https://github.com/directus/directus)
+[![GitHub stars](https://img.shields.io/github/stars/directus/directus?style=social&color=white)](https://github.com/directus/directus/stargazers)
+- **Repository**: [directus/directus](https://github.com/directus/directus)
+- **Tech Stack**: TypeScript, Node.js, Vue.js (PostgreSQL, MySQL, SQLite, Oracle, MS SQL)
+- **Overview**: Open-source data engine and relational headless CMS that wraps SQL schemas with a real-time REST/GraphQL API and no-code data management dashboard.
+- **Key Capabilities**: Complete custom schema builder, complex relational modeling (M2M, M2O, O2M, M2A / Any-to-Many), granular field-level permissions, and dynamic webhooks/flows.
+
+### 3. [Teable](https://github.com/teableio/teable)
+[![GitHub stars](https://img.shields.io/github/stars/teableio/teable?style=social&color=white)](https://github.com/teableio/teable/stargazers)
+- **Repository**: [teableio/teable](https://github.com/teableio/teable)
+- **Tech Stack**: TypeScript, React, Next.js, PostgreSQL
+- **Overview**: High-performance, open-source spreadsheet-database hybrid built natively on top of PostgreSQL with real-time multi-user collaboration.
+- **Key Capabilities**: Million-row performance capability, true Postgres foreign key schema representations, SQL query view, comprehensive field types, and REST API access.
+
+### 4. [APITable](https://github.com/apitable/apitable)
+[![GitHub stars](https://img.shields.io/github/stars/apitable/apitable?style=social&color=white)](https://github.com/apitable/apitable/stargazers)
+- **Repository**: [apitable/apitable](https://github.com/apitable/apitable)
+- **Tech Stack**: Java, TypeScript, React
+- **Overview**: API-centric visual database and collaborative spreadsheet infrastructure alternative to Airtable.
+- **Key Capabilities**: Visual schema designer, relational record links, cascading drop-downs, two-way automated syncing, REST APIs, and embedded widget extensions.
+
+### 5. [Grist](https://github.com/gristlabs/grist-core)
+[![GitHub stars](https://img.shields.io/github/stars/gristlabs/grist-core?style=social&color=white)](https://github.com/gristlabs/grist-core/stargazers)
+- **Repository**: [gristlabs/grist-core](https://github.com/gristlabs/grist-core)
+- **Tech Stack**: Python, JavaScript, SQLite
+- **Overview**: Open-source relational spreadsheet that combines database power with Python formulas and visual layout flexibility.
+- **Key Capabilities**: Multi-table relational modeling, Python formula engine, linked views (master-detail records), access-control rules per record/column, and full self-hosting.
+
+### 6. [Baserow](https://github.com/baserow/baserow)
+[![GitHub stars](https://img.shields.io/github/stars/baserow/baserow?style=social&color=white)](https://github.com/baserow/baserow/stargazers)
+- **Repository**: [baserow/baserow](https://github.com/baserow/baserow)
+- **Tech Stack**: Python, Django, Nuxt.js, PostgreSQL
+- **Overview**: Open-core no-code relational database platform built on PostgreSQL for creating modular business tools and micro-applications.
+- **Key Capabilities**: 25+ field types, foreign-key relational linking, rollups, lookups, formula builder, built-in workflow automations, visual application builder, and Docker/Railway setup.
+
+### 7. [Mathesar](https://github.com/mathesar-foundation/mathesar)
+[![GitHub stars](https://img.shields.io/github/stars/mathesar-foundation/mathesar?style=social&color=white)](https://github.com/mathesar-foundation/mathesar/stargazers)
+- **Repository**: [mathesar-foundation/mathesar](https://github.com/mathesar-foundation/mathesar)
+- **Tech Stack**: Python, Svelte, TypeScript, PostgreSQL
+- **Overview**: Open-source intuitive web UI designed specifically for PostgreSQL databases, allowing technical and non-technical users to build and modify relational schemas.
+- **Key Capabilities**: Direct PostgreSQL schema modeling, foreign key relationship visualization, custom constraints, table exploration, and non-destructive schema modifications.
+
+### 8. [Saltcorn](https://github.com/saltcorn/saltcorn)
+[![GitHub stars](https://img.shields.io/github/stars/saltcorn/saltcorn?style=social&color=white)](https://github.com/saltcorn/saltcorn/stargazers)
+- **Repository**: [saltcorn/saltcorn](https://github.com/saltcorn/saltcorn)
+- **Tech Stack**: JavaScript, Node.js, PostgreSQL, SQLite
+- **Overview**: Completely open-source, extensible no-code database and web application builder with point-and-click schema and UI design.
+- **Key Capabilities**: Relational data modeling, table join visualizers, custom views (lists, cards, show views), integrated user permission models, and plugin architecture.
+
+---
+
+## Architectural Comparison: Commercial vs. Open-Source
+
+| Dimension | Commercial SaaS (Airtable, Salesforce, HubSpot) | Open-Source Self-Hosted (NocoDB, Directus, Teable, Baserow) |
+| :--- | :--- | :--- |
+| **Data Ownership & Privacy** | Vendor-hosted; subject to cloud tenancy rules | 100% self-hosted on your own infrastructure (PostgreSQL/MySQL); air-gapped ready |
+| **Schema Flexibility** | Proprietary internal engines; exportable via APIs | Native standard SQL database tables and foreign keys directly readable by external tools |
+| **Extensibility & Integrations** | Pre-built out-of-the-box ecosystems (CRM, Zapier, native apps) | REST/GraphQL APIs, custom webhooks, Docker containers, and custom code modules |
+| **Cost at Scale** | Scales linearly per seat or data volume; can become expensive | Infrastructure-based hosting costs only (compute & storage); unlimited users on core plans |
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Add or update entries in `README.md` conforming to the tabular SaaS format or ranked open-source format.
+3. Ensure all links, descriptions, pricing data, free tier limits, and GitHub statistics are factual and verified.
+4. Submit a Pull Request with a descriptive summary of your changes.
+
+Star the repo if you find it helpful!
+
+---
+
+## Disclaimer
+
+- This is a **community-curated list** for informational and educational purposes.
+- Commercial trademarks and product names belong to their respective companies.
+- Always review current software licensing agreements (e.g., AGPL, Apache 2.0, MIT, or Business Source Licenses) before using open-source tools in enterprise commercial environments.
