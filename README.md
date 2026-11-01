@@ -73,7 +73,7 @@ The following SaaS platforms enable teams to build custom schemas, linked record
 
 Open-source relational database platforms provide self-hosted control, zero vendor lock-in, customizable schemas, and REST/GraphQL API generation directly over PostgreSQL or MySQL engines.
 
-Sorted by **GitHub Star Count (Descending)**:
+Sorted by **GitHub Stars_Count (Descending)**:
 
 ### 1. 🥇 [NocoDB](https://github.com/nocodb/nocodb)
 <a href="https://github.com/nocodb/nocodb/stargazers"><img src="https://img.shields.io/github/stars/nocodb/nocodb?style=social&color=white" alt="NocoDB Stars" /></a>
